@@ -41,7 +41,7 @@
         }
     },
     "scripts": {
-        "post-install-cmd": "npm install && npm i puppeteer-extra puppeteer-extra-plugin-recaptcha puppeteer-extra-plugin-stealth",
+        "post-install-cmd": "npm install",
         "test": "./vendor/bin/phpunit"
     },
     "config": {
