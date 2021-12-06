@@ -1,5 +1,5 @@
 {
-    "name": "FrankFlow/puphpeteer",
+    "name": "frankflow/puphpeteer",
     "description": "A Puppeteer bridge for PHP, supporting the entire API.",
     "keywords": [
         "php",
