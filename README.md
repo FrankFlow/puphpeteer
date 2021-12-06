@@ -2,15 +2,14 @@
 
 <img src="https://user-images.githubusercontent.com/817508/100672192-dd258500-3361-11eb-845f-e8b5109752e4.png" style="max-width:100%;" width="190px" align="right">
 
-[![PHP Version](https://img.shields.io/packagist/php-v/nesk/puphpeteer.svg?style=flat-square)](http://php.net/)
-[![Composer Version](https://img.shields.io/packagist/v/nesk/puphpeteer.svg?style=flat-square&label=Composer)](https://packagist.org/packages/nesk/puphpeteer)
-[![Node Version](https://img.shields.io/node/v/@nesk/puphpeteer.svg?style=flat-square&label=Node)](https://nodejs.org/)
-[![NPM Version](https://img.shields.io/npm/v/@nesk/puphpeteer.svg?style=flat-square&label=NPM)](https://www.npmjs.com/package/@nesk/puphpeteer)
-[![Build Status](https://img.shields.io/travis/nesk/puphpeteer.svg?style=flat-square&label=Build%20Status)](https://travis-ci.org/nesk/puphpeteer)
+
+
+
+
 
 A [Puppeteer](https://github.com/GoogleChrome/puppeteer/) bridge for PHP, supporting the entire API. Based on [Rialto](https://github.com/nesk/rialto/), a package to manage Node resources from PHP.
 
-Here are some examples [borrowed from Puppeteer's documentation](https://github.com/GoogleChrome/puppeteer/blob/master/README.md#usage) and adapted to PHP's syntax:
+Here are some examples [borrowed from Puppeteer&#39;s documentation](https://github.com/GoogleChrome/puppeteer/blob/master/README.md#usage) and adapted to PHP's syntax:
 
 **Example** - navigating to https://example.com and saving a screenshot as *example.png*:
 
@@ -62,6 +61,10 @@ Install it with these two command lines:
 ```shell
 composer require nesk/puphpeteer
 npm install @nesk/puphpeteer
+
+For RecaptchaPlugin, add provider's id and token as process.env variables
+Example:
+RecaptchaPlugin({provider: {id: process.env.RECAPTCHA_RESOLVER_PROVIDER, token: process.env.RECAPTCHA_RESOLVER_TOKEN}})
 ```
 
 ## Notable differences between PuPHPeteer and Puppeteer
@@ -82,7 +85,7 @@ $puppeteer = new Puppeteer;
 
 This will create a new Node process controlled by PHP.
 
-You can also pass some options to the constructor, see [Rialto's documentation](https://github.com/nesk/rialto/blob/master/docs/api.md#options). PuPHPeteer also extends these options:
+You can also pass some options to the constructor, see [Rialto&#39;s documentation](https://github.com/nesk/rialto/blob/master/docs/api.md#options). PuPHPeteer also extends these options:
 
 ```php
 [
@@ -105,6 +108,7 @@ $puppeteer->launch()->newPage()->goto($url, [
     'timeout' => 60000, // In milliseconds
 ]);
 ```
+
 </details>
 
 ### No need to use the `await` keyword
@@ -155,6 +159,10 @@ try {
 ```
 
 Instead, a `Node\Exception` will be thrown, the Node process will stay alive and usable.
+
+### Puppeteer-Extra integration
+
+Puppeteer is been replaced by puppeteer-extra, with stealth and recaptcha plugins enabled by default.
 
 ## License
 
