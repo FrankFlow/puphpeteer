@@ -24,7 +24,10 @@
   "dependencies": {
     "@nesk/rialto": "^1.2.1",
     "puppeteer": "~5.5.0",
-		"dotenv": "^10.0.0"
+		"dotenv": "^10.0.0",
+		"puppeteer-extra": "^3.2.3",
+		"puppeteer-extra-plugin-recaptcha": "^3.5.0",
+		"puppeteer-extra-plugin-stealth": "^2.4.5"
   },
   "devDependencies": {
     "@types/yargs": "^15.0.10",
