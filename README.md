@@ -2,11 +2,6 @@
 
 <img src="https://user-images.githubusercontent.com/817508/100672192-dd258500-3361-11eb-845f-e8b5109752e4.png" style="max-width:100%;" width="190px" align="right">
 
-
-
-
-
-
 A [Puppeteer](https://github.com/GoogleChrome/puppeteer/) bridge for PHP, supporting the entire API. Based on [Rialto](https://github.com/nesk/rialto/), a package to manage Node resources from PHP.
 
 Here are some examples [borrowed from Puppeteer&#39;s documentation](https://github.com/GoogleChrome/puppeteer/blob/master/README.md#usage) and adapted to PHP's syntax:
@@ -59,8 +54,8 @@ This package requires PHP >= 7.3 and Node >= 8.
 Install it with these two command lines:
 
 ```shell
-composer require nesk/puphpeteer
-npm install @nesk/puphpeteer
+composer require frankflow/puphpeteer
+npm install @nesk/puphpeteer puppeteer-extra puppeteer-extra-plugin-recaptcha puppeteer-extra-plugin-stealth
 
 For RecaptchaPlugin, add provider's id and token as process.env variables
 Example:
